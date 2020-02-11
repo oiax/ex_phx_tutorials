@@ -85,8 +85,10 @@ Randomized with seed 11186
 
 ## _mix run_ コマンドで関数を呼び出す
 
+ソースコードをコンパイルする。
+
 ```bash
-$ mix run -e "Alpha.hello()"
+$ mix compile
 ```
 
 ```
@@ -94,7 +96,11 @@ Compiling 1 file (.ex)
 Generated alpha app
 ```
 
-> `alpha` というアプリケーションのビルドに成功したことが分かる。しかし、ターミナルに `:world` とは表示されない。
+関数を呼び出す。しかし、ターミナルには何も表示されない。
+
+```bash
+$ mix run -e "Alpha.hello()"
+```
 
 ## 関数 `Alpha.print/0` を追加
 
