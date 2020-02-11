@@ -15,4 +15,8 @@ defmodule Alpha do
   def hello do
     :world
   end
+
+  def print do
+    IO.inspect(hello())
+  end
 end
