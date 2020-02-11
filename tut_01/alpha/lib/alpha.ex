@@ -25,4 +25,10 @@ defmodule Alpha do
     b = ["w" | a]
     IO.inspect(b)
   end
+
+  def push do
+    a = ["x", "y", "z"]
+    b = a ++ ["w"]
+    IO.inspect(b)
+  end
 end
