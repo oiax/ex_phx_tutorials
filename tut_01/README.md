@@ -2,6 +2,7 @@
 
 1. [Mixプロジェクト](./MIX_PROJECT.md)
 1. [基本の型](./BASIC_TYPES.md)
+1. [項と変数](./TERMS_AND_VARIABLES.md)
 1. [リスト](./LIST.md)
 1. [マップ](./MAP.md)
 1. [モジュールと関数](./MOD_FUNC.md)
