@@ -19,4 +19,10 @@ defmodule Alpha do
   def print do
     IO.inspect(hello())
   end
+
+  def unshift do
+    a = ["x", "y", "z"]
+    b = ["w" | a]
+    IO.inspect(b)
+  end
 end
