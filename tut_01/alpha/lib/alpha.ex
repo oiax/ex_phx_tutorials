@@ -31,4 +31,19 @@ defmodule Alpha do
     b = a ++ ["w"]
     IO.inspect(b)
   end
+
+  def put_and_delete do
+    m1 = %{"red" => 0, "green" => 1, "blue" => 2}
+    m2 = Map.put(m1, "black", 3)
+    m3 = Map.put(m2, "red", 4)
+    m4 = Map.delete(m3, "green")
+    IO.inspect(m4)
+  end
+
+  def get_value do
+    m = %{red: 0, green: 1, blue: 2}
+    c1 = Map.get(m, :red)
+    c2 = m.green
+    IO.inspect([c1, c2])
+  end
 end
