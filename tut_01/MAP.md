@@ -95,3 +95,57 @@ $ mix run -e "Alpha.put_and_delete()"
 Compiling 1 file (.ex)
 %{"black" => 3, "blue" => 2, "red" => 4}
 ```
+
+## 値の取得(1)
+
+マップから値を取得するには、関数 `Map.get/3` を利用する。
+
+* `Map.get(map, key, default \\ nil)` - `map` から `key` に対応する値を取得する
+
+省略可能な引数 `default` は、`key` が存在しないときに返すデフォルト値である。
+
+例:
+
+```elixir
+m = %{"red" => 0, "green" => 1, "blue" => 2}
+c1 = Map.get(m, "blue")
+c2 = Map.get(m, "black", -1)
+c3 = Map.get(m, "white")
+```
+
+上記の結果、変数 `c1` には `2`、変数 `c2` には `-1`、変数 `c3` には `nil` がセットされることになる。
+
+## 値の取得(2)
+
+キーがアトムのとき、次のような簡便な記述法で値を取得できる。
+
+```elixir
+m = %{red: 0, green: 1, blue: 2}
+c = m.red
+```
+
+上記の結果、変数 `c` には `0` がセットされることになる。
+
+存在しないキーで値を取得しようとすると、例外 `KeyError` が発生する。
+
+```elixir
+m = %{red: 0, green: 1, blue: 2}
+c = m.black
+```
+
+```
+** (KeyError) key :black not found in: %{blue: 2, green: 1, red: 0}
+```
+
+## 【演習】
+
+* [ce228e6](https://github.com/oiax/ex_phx_tutorials/commit/ce228e6732e9350c8ba1419f4f9a42fc20ced5d3) を適用。
+
+```bash
+$ mix run -e "Alpha.get_value()"
+```
+
+```
+Compiling 1 file (.ex)
+[0, 1]
+```
