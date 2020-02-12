@@ -39,4 +39,11 @@ defmodule Alpha do
     m4 = Map.delete(m3, "green")
     IO.inspect(m4)
   end
+
+  def get_value do
+    m = %{red: 0, green: 1, blue: 2}
+    c1 = Map.get(m, :red)
+    c2 = m.green
+    IO.inspect([c1, c2])
+  end
 end
