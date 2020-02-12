@@ -82,3 +82,16 @@ m2 = Map.delete(m1, "red")
 この結果、変数 `m2` は `%{"green" => 1, "blue" => 2}` というマップを参照することになる。
 
 関数 `Map.delete/2` の第2引数に存在しないキーが与えられた場合、第1引数のマップがそのまま返される。
+
+## 【演習】
+
+* [577d815](https://github.com/oiax/ex_phx_tutorials/commit/577d815f395acdc7548bec6144106db63465b0bd) を適用。
+
+```bash
+$ mix run -e "Alpha.put_and_delete()"
+```
+
+```
+Compiling 1 file (.ex)
+%{"black" => 3, "blue" => 2, "red" => 4}
+```
