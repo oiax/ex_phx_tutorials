@@ -1,8 +1,11 @@
 defmodule Gamma do
   def transform(str) do
-    a = String.trim(str)
-    b = String.downcase(a)
-    c = String.reverse(b)
+    c =
+      str
+      |> String.trim()
+      |> String.downcase()
+      |> String.reverse()
+
     IO.inspect(c)
   end
 end
