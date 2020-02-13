@@ -1,1 +1,1 @@
-<p>Hello, <%= @name %>!</p>
+<p>Hello, <%= format_name(@name) %>!</p>
