@@ -8,4 +8,9 @@ defmodule BigGateWeb.PageController do
   def hello(conn, params) do
     render(conn, "hello.html", name: params["name"])
   end
+
+  def user_list(conn, _params) do
+    users = BigGate.Core.fetch_users()
+    render(conn, "user_list.html", users: users)
+  end
 end

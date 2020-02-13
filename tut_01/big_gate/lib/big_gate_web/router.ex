@@ -18,6 +18,7 @@ defmodule BigGateWeb.Router do
 
     get "/", PageController, :index
     get "/hello/:name", PageController, :hello
+    get "/user_list", PageController, :user_list
   end
 
   # Other scopes may use custom stacks.
