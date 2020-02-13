@@ -3,6 +3,8 @@ defmodule BigGate.Core.User do
   import Ecto.Changeset
 
   schema "core_users" do
+    field(:name, :string)
+    field(:email, :string)
 
     timestamps()
   end
