@@ -1,8 +1,11 @@
 defmodule Delta do
   def transform(str) do
-    a = String.trim(str)
-    b = String.downcase(a)
-    c = append(b, "@")
+    c =
+      str
+      |> String.trim()
+      |> String.downcase()
+      |> append("@")
+
     IO.inspect(c)
   end
 
