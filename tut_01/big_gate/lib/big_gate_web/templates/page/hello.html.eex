@@ -1,0 +1,1 @@
+<p>Hello, <%= format_name(@name) %>!</p>
