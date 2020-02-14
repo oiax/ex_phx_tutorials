@@ -114,3 +114,31 @@ $ mix run -e "Alpha.print()"
 Compiling 1 file (.ex)
 :world
 ```
+
+## _mix format_ コマンドでソースコードを整形する
+
+エディタで 関数 `Alpha.print/0` の中身を次のように書き換える。
+
+```elixir
+    IO.inspect hello()
+```
+
+> 曖昧にならない限り、関数への引数を囲む括弧は省略可能である。しかし、括弧を省略しないことが推奨されている。
+
+```bash
+$ mix format
+```
+
+ソースコードが元に戻る。
+
+## 【参考】 整形ルールの調整
+
+_mix format_ コマンドは98カラムを超える行を自動で折り曲げる。整形のルールは `.formatter.exs` で調整可能。例えば、このファイルを次のように書き換えると80カラムで折り曲げるようになる。
+
+```elixir
+# Used by "mix format"
+[
+  inputs: ["{mix,.formatter}.exs", "{config,lib,test}/**/*.{ex,exs}"],
+  line_length: 80
+]
+```
